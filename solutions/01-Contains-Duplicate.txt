@@ -1,0 +1,23 @@
+public class Solution {
+    public bool ContainsDuplicate(int[] nums) {
+
+        List<int> numCheck = new List<int>();
+        bool duplicates = false;
+
+        foreach (int number in nums)
+        {
+            if (numCheck.Contains(number))
+            {
+                duplicates = true;
+
+            } 
+            else
+            {
+                numCheck.Add(number);
+            }
+        }
+
+        return duplicates;
+
+    }
+}
