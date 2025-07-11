@@ -1,0 +1,43 @@
+public class Solution {
+    public bool IsAnagram(string s, string t) {
+        
+        bool checkAnagram = true;
+
+        // Converts strings to lowercase
+        s = s.ToLower();
+        t = t.ToLower();
+
+        if (s.Length != t.Length)
+        {
+            checkAnagram = false;
+        }
+        else
+        {
+            
+            // Converts string to char[] & sort
+            char[] arrayS = s.ToCharArray();
+            char[] arrayT = t.ToCharArray();
+
+            Array.Sort(arrayS);
+            Array.Sort(arrayT);
+
+            
+            // Checks if Both array matches 
+            for (int i = 0; i < arrayS.Length; i++)
+            {
+                if (arrayS[i] == arrayT[i])
+                {
+                    checkAnagram = true;
+                }
+                else
+                {
+                    // If current char does NOT match, sets bool to 'false' & ends loop
+                    checkAnagram = false;
+                    break;
+                }
+            }
+        }
+
+        return checkAnagram;
+    }
+}
