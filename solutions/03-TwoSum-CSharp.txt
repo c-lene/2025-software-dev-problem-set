@@ -11,9 +11,6 @@ public class Solution {
             // Placeholder for 'i' && used to check current value of 'i'
             int sumNum = i;
 
-            // List<int> indices = new List<int>();
-
-
             // Loops through array for 'j' -- Number that is being added
             for (int j = i + 1; j < nums.Length; j++)
             {
