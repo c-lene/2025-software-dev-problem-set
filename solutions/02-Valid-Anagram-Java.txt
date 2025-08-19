@@ -1,0 +1,29 @@
+
+// Solution 1 
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        
+        // Checks if length matches
+        if (s.length() == t.length()) {
+
+            // Converts String to Lowercase Char Array
+            char[] sCharArray = s.toLowerCase().toCharArray();
+            char[] tCharArray = t.toLowerCase().toCharArray();
+
+            // Sorts the Char Array
+            Arrays.sort(sCharArray);
+            Arrays.sort(tCharArray);
+
+            // Converts the Char Array back to String
+            String sSortedString = new String (sCharArray);
+            String tSortedString = new String (tCharArray);
+
+            // Checks if String matches
+            return sSortedString.equals(tSortedString);
+
+        } else {
+            return false;
+        }
+  
+    }
+}
